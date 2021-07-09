@@ -1,7 +1,7 @@
 
 # Apps desenvolvidos com JavaScript
 
-*Lista de aplicativos desenvolvidos com JavaScript, HTML e CSS!
+*Lista de aplicativos desenvolvidos com JavaScript, HTML e CSS!*
 
 ## Apps
 

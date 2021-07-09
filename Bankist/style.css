@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 2rem;
+  }
+  
+  .button{
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .button:hover,
+  .button:focus{
+    outline: none;
+    color: #777;
+  }
+  
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background-color: #f3f3f3;
+  }
+  
+  .nav_welcome{
+    font-size: 1.9rem;
+    font-weight: 500;
+  }
+  
+  .nav_logo{
+    height: 5.5rem;
+  }
+  
+  .nav_login{
+    display: flex;
+  }
+  
+  .nav_login-input{
+    padding: 0.5rem 2rem;
+    border: 1px solid #fff;
+    font-size: 1.4rem;
+    font-family: inherit;
+    text-align: center;
+    width: 12rem;
+    color: inherit;
+    border-radius: 4rem;
+    margin-right: 1rem;
+    transition: 0.3s;
+  }
+  
+  .nav_login-input:focus{
+    outline: none;
+    border: 1px solid #ccc;
+  }
+  
+  .nav_login-button{
+    margin: 0 1rem;
+  }
+  
+  .main{
+    position: relative;
+    max-width: 1024px;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 2rem;
+    box-shadow: 0 -1px 4px rgba(0,0,0,.15);;
+    
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: auto repeat(3, 15rem) auto;
+    gap: 2rem;  
+    opacity: 0;
+    transition: all 1s;
+  }
+  
+  .balance{
+    grid-column: 1/3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .balance_title{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .balance_date{
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  .balance_value{
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  
+  .movements{
+    grid-row: 2/5;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    overflow: auto;
+  }
+  
+  .movements_row{
+    padding: 1.6rem 3.1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  
+  .movements_type{
+    padding: .5rem .9rem;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    margin-right: 2rem;
+  }
+  
+  .movements_type--deposit{
+    background: linear-gradient(to top left, #39b385, #9be15d);
+  }
+  .movements_type--withdrawal{
+    background: linear-gradient(to top left, #e52a5a, #ff585f);
+  }
+  
+  .movements_date{
+    color: #d1d1d1;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+  
+  .movements_value{
+    font-size: 1.5rem;
+  }
+  
+  .summary{
+    grid-row: 5/6;
+    display: inline-flex; 
+    align-items: baseline;
+    margin-top: 1.3rem;
+  }
+  
+  .summary_label{
+    font-size: 1.2rem;
+    margin-left: 2.5rem;
+    text-transform: uppercase;
+  }
+  
+  .summary_value{
+    margin-left: .8rem;
+    font-size: 1.8rem;
+  }
+  
+  .summary_value--in,
+  .summary_value--interest {
+    color: #66c873;
+  }
+  .summary_value--out {
+    color: #f5465d;
+  }
+  
+  .summary_button{
+    margin-left: auto;
+  }
+  
+  .operation{
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    color: #666;
+  }
+  
+  .operation--transfer{
+    background: linear-gradient(to top left, #ffb003, #ffcb03)
+  }
+  
+  .operation--loan{
+    background: linear-gradient(to top left, #39b385, #9be15d)
+  }
+  
+  .operation--close{
+    background: linear-gradient(to top left, #e52a5a, #ff585f)
+  }
+  
+  .operation_title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form{
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 1fr;
+    gap: 0.4rem 1rem;
+  }
+  
+  .form_loan{
+    grid-template-columns: 2.5fr 1fr 2.5fr;
+  }
+  
+  .form_label--loan{
+    grid-row: 2;
+  }
+  
+  .form_input{
+    width: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: inherit;
+    padding: .5rem 1rem;
+    transition: 0.3s;
+  }
+  
+  .form_input:focus{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .form_label{
+    color: inherit;
+    font-size: 1.2rem;
+    font-family: 300;
+    text-align: center;
+  }
+  
+  .form_button{
+    border-radius: 1rem;
+    background: linear-gradient(to top left, #f1f1f1, #ffffff)
+  }
+  
+  .timer{
+    color: #666;
+    padding: 0 0.3rem;
+    margin-top: 1.9rem;
+    text-align: right;
+    font-size: 1.25rem;
+  }
+  
+  .timer_hour{
+    font-weight: 600;
+  }
+  
+  
+  
